@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Padres</h1>
+      <table class="table">
+        <tr>
+          <th>ID</th>
+          <th>NOMBRE</th>
+          <th>APELLIDO</th>
+          <th>EDAD</th>
+          <th>EDITAR</th>
+        </tr>
+        <tr *ngFor="let padre of padres">
+          <td>{{padre.id}}</td>
+          <td>{{padre.nombrePadre}}</td>
+          <td>{{padre.apellidoPadre}}</td>
+          <td>{{padre.edadPadre}}</td>
+          <td><button class="btn btn-success" [routerLink]="['/padre-form', padre.id]">Editar</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

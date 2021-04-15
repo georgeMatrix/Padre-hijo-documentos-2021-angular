@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>APELLIDO</th>
+            <th>NOMBRE DEL PADRE</th>
+            <th>EDITAR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hijo of hijos">
+            <td>{{hijo.id}}</td>
+            <td>{{hijo.nombreHijo}}</td>
+            <td>{{hijo.apellidoHijo}}</td>
+            <td>{{hijo.edadHijo}}</td>
+            <td>{{hijo.idPadre}}</td>
+            <td><button class="btn btn-success" [routerLink]="['/hijo-form', hijo.id]">Editar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
