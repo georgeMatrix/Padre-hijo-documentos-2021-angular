@@ -2,16 +2,22 @@
   <div class="row">
     <div class="col-md-12">
       <table class="table">
-        <tr>
-          <th>Id</th>
-          <th>CURP</th>
-          <th>RFC</th>
-        </tr>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>CURP</th>
+            <th>RFC</th>
+            <th>EDITAR</th>
+          </tr>
+        </thead>
+        <tbody>
         <tr *ngFor="let documento of documentos">
           <td>{{documento.id}}</td>
           <td>{{documento.curp}}</td>
           <td>{{documento.rfc}}</td>
+          <td><button class="btn btn-success" [routerLink]="['/documento-form', documento.id]">Editar</button></td>
         </tr>
+        </tbody>
       </table>
     </div>
   </div>

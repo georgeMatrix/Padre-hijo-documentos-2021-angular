@@ -1,12 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <table class="table">
+      <table class="table"><!-- tabla comienza -->
         <thead>
           <tr>
             <th>ID</th>
             <th>NOMBRE</th>
             <th>APELLIDO</th>
+            <th>EDAD</th>
             <th>NOMBRE DEL PADRE</th>
             <th>EDITAR</th>
           </tr>
@@ -17,11 +18,11 @@
             <td>{{hijo.nombreHijo}}</td>
             <td>{{hijo.apellidoHijo}}</td>
             <td>{{hijo.edadHijo}}</td>
-            <td>{{hijo.idPadre}}</td>
+            <td><app-hijo-nombre-padre [idPadre]="hijo.idPadre"></app-hijo-nombre-padre></td>
             <td><button class="btn btn-success" [routerLink]="['/hijo-form', hijo.id]">Editar</button></td>
           </tr>
         </tbody>
-      </table>
+      </table><!-- tabla termina -->
     </div>
   </div>
 </div>

@@ -4,4 +4,5 @@ export class Hijo {
   apellidoHijo: string;
   edadHijo: number;
   idPadre: number;
+  padrenombre: string;
 }

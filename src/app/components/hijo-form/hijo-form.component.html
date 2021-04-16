@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="formGroupHijo">
+        <div class="form-group" [hidden]="true">
+          <label for="">id</label>
+          <input type="text" formControlName="id" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Nombre Hijo</label>
+          <input type="text" formControlName="nombreHijo" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Apellido Hijo</label>
+          <input type="text" formControlName="apellidoHijo" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Edad Hijo</label>
+          <input type="number" formControlName="edadHijo" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Padre</label>
+          <select formControlName="idPadre" class="form-control">
+            <option [value]="padre.id" *ngFor="let padre of padres">{{padre.nombrePadre}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success" (click)="saveHijo(formGroupHijo.value)" *ngIf="!formGroupHijo.value.id else updateHijoBlock">Guardar Hijo</button>
+        </div>
+        <ng-template #updateHijoBlock>
+          <div class="form-group">
+            <button class="btn btn-info" (click)="updateHijo(formGroupHijo.value)">Editar Hijo</button>
+          </div>
+        </ng-template>
+      </form>
+    </div>
+  </div>
+</div>

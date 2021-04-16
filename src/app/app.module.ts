@@ -13,6 +13,7 @@ import { PadreFormComponent } from './components/padre-form/padre-form.component
 import { HijoFormComponent } from './components/hijo-form/hijo-form.component';
 import { DocumentoFormComponent } from './components/documento-form/documento-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HijoNombrePadreComponent } from './components/hijo-nombre-padre/hijo-nombre-padre.component';
 
 const MENU: Routes = [
   {path: 'hijos', component: HijoComponent},
@@ -22,7 +23,8 @@ const MENU: Routes = [
   {path: 'padre-form', component: PadreFormComponent},
   {path: 'padre-form/:id', component: PadreFormComponent},
   {path: 'documentos', component: DocumentoComponent},
-  {path: 'documento-form', component: DocumentoFormComponent}
+  {path: 'documento-form', component: DocumentoFormComponent},
+  {path: 'documento-form/:id', component: DocumentoFormComponent}
 ];
 
 @NgModule({
@@ -34,7 +36,8 @@ const MENU: Routes = [
     MenuComponent,
     PadreFormComponent,
     HijoFormComponent,
-    DocumentoFormComponent
+    DocumentoFormComponent,
+    HijoNombrePadreComponent
   ],
   imports: [
     BrowserModule,
